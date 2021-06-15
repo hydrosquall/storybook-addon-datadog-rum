@@ -10,10 +10,14 @@ A storybook add-on for using Datadog instrumentation to collect data about how y
 
 ## Installation
 
-Install `plugin-name` with NPM
+Install `storybook-addon-datadog-rum` with NPM or yarn
 
 ```bash
-  yarn add @hydrosquall/storybook-datadog-rum
+  npm install storybook-addon-datadog-rum
+```
+
+```bash
+  yarn add storybook-addon-datadog-rum
 ```
 
 ## Environment Variables
