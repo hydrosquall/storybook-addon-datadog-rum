@@ -1,36 +1,32 @@
-import { addons, types } from "@storybook/addons";
+// Based on GA addon
+// https://github.com/storybookjs/addon-google-analytics/blob/next/src/register.ts
+// No need to manually instrument page views due to usage of history API
+//  - https://docs.datadoghq.com/real_user_monitoring/browser/data_collected/?tab=view#single-page-applications
 
-import { ADDON_ID, TOOL_ID, PANEL_ID } from "../constants";
-import { Tool } from "../Tool";
-import { Panel } from "../Panel";
-import { Tab } from "../Tab";
 
-// Register the addon
-addons.register(ADDON_ID, () => {
-  // Register the tool
-  addons.add(TOOL_ID, {
-    type: types.TOOL,
-    title: "My addon",
-    match: ({ viewMode }) => !!(viewMode && viewMode.match(/^(story|docs)$/)),
-    render: Tool,
+import { window as globalWindow } from 'global';
+import { addons } from '@storybook/addons';
+import { STORY_ERRORED, STORY_MISSING } from '@storybook/core-events';
+
+import { datadogRum } from '@datadog/browser-rum'
+
+addons.register('storybook/datadog-rum', (api) => {
+  datadogRum.init({
+    applicationId: globalWindow.STORYBOOK_DATADOG_APPLICATION_ID,
+    clientToken: globalWindow.STORYBOOK_DATADOG_CLIENT_TOKEN,
+    site: globalWindow.STORYBOOK_DATADOG_SITE,
+    service: globalWindow.STORYBOOK_DATADOG_SERVICE ?? 'storybook-default',
+    //  env: 'production',
+    //  version: '1.0.0',
+    sampleRate: globalWindow.STORYBOOK_DATADOG_SAMPLE_RATE ?? 100,
+    trackInteractions: globalWindow.STORYBOOK_DATADOG_TRACK_INTERACTIONS?? true,
+  })
+
+  api.on(STORY_ERRORED, ({ description }: { description: string }) => {
+    datadogRum.addError( description )
   });
-
-  // Register the panel
-  addons.add(PANEL_ID, {
-    type: types.PANEL,
-    title: "My addon",
-    match: ({ viewMode }) => viewMode === "story",
-    render: Panel,
-  });
-
-  // Register the tab
-  addons.add(PANEL_ID, {
-    type: types.TAB,
-    title: "My addon",
-    //👇 Checks the current route for the story
-    route: ({ storyId }) => `/myaddon/${storyId}`,
-    //👇 Shows the Tab UI element in myaddon view mode
-    match: ({ viewMode }) => viewMode === "myaddon",
-    render: Tab,
+  api.on(STORY_MISSING, (id: string) => {
+    const description = `attempted to render ${id}, but it is missing`
+    datadogRum.addError(description);
   });
 });
