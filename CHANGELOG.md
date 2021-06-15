@@ -1,3 +1,15 @@
+# v0.1.2 (Tue Jun 15 2021)
+
+#### ⚠️ Pushed to `main`
+
+- Update installation instructions ([@hydrosquall](https://github.com/hydrosquall))
+
+#### Authors: 1
+
+- Cameron Yick ([@hydrosquall](https://github.com/hydrosquall))
+
+---
+
 # v0.1.1 (Tue Jun 15 2021)
 
 #### 🐛 Bug Fix
