@@ -1,3 +1,9 @@
+// Based on GA addon
+// https://github.com/storybookjs/addon-google-analytics/blob/next/src/register.ts
+// No need to manually instrument page views due to usage of history API
+//  - https://docs.datadoghq.com/real_user_monitoring/browser/data_collected/?tab=view#single-page-applications
+
+
 import { window as globalWindow } from 'global';
 import { addons } from '@storybook/addons';
 import { STORY_ERRORED, STORY_MISSING } from '@storybook/core-events';
