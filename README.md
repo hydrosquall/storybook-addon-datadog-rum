@@ -1,8 +1,9 @@
-# Datadog RUM / Storybook Add-on
+# Datadog RUM / Storybook Addon
 
 [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
+[![npm version](https://badge.fury.io/js/storybook-addon-datadog-rum.svg)](https://badge.fury.io/js/storybook-addon-datadog-rum)
 
-A storybook add-on for using Datadog instrumentation to collect data about how your visitors are using your Storybook component documentation. Use this to find out which documentation pages are popular, and which pages have bugs.
+A StorybookJS Addon for using Datadog's RUM tool to collect data about how your visitors are using your Storybook component documentation. Use RUM to find out which documentation pages are popular or have errors before your users notice.
 ## Demo
 
 - _Insert link to a public Datadog Storybook using this addon_
@@ -22,7 +23,7 @@ Install `storybook-addon-datadog-rum` with NPM or yarn
 
 ## Environment Variables
 
-To run this project, you will need to add the following environment variables to your .env file. (See typings.d.ts for the most up-to-date list.)
+To run this project, you will need to add the following environment variables to your .env file. (See [typings.d.ts](./src/typings.d.ts) for the most up-to-date list.)
 
 ```ts
 {
@@ -43,7 +44,7 @@ To run this project, you will need to add the following environment variables to
 
 Contributions are always welcome!
 
-See `contributing.md` for ways to get started.
+See [`contributing.md`](./CONTRIBUTING.md) for ways to get started.
 
 Please adhere to this project's `code of conduct`.
 
