@@ -10,7 +10,10 @@ import { STORY_ERRORED, STORY_MISSING } from '@storybook/core-events';
 
 import { datadogRum } from '@datadog/browser-rum'
 
-addons.register('storybook/datadog-rum', (api) => {
+import { ADDON_ID } from '../constants';
+
+
+addons.register(ADDON_ID, (api) => {
   datadogRum.init({
     applicationId: globalWindow.STORYBOOK_DATADOG_APPLICATION_ID,
     clientToken: globalWindow.STORYBOOK_DATADOG_CLIENT_TOKEN,
