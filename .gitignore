@@ -4,3 +4,12 @@ storybook-static/
 build-storybook.log
 .DS_Store
 .env
+
+## Yarn
+.yarn/*
+!.yarn/patches
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
