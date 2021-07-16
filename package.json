@@ -41,6 +41,8 @@
     "eject-ts": "zx scripts/eject-typescript.mjs"
   },
   "devDependencies": {
+    "@auto-it/conventional-commits": "^10.29.3",
+    "@auto-it/first-time-contributor": "^10.29.3",
     "@babel/cli": "^7.12.1",
     "@babel/core": "^7.12.3",
     "@babel/preset-env": "^7.12.1",
