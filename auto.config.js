@@ -19,7 +19,7 @@ function rc() {
 
     baseBranch: "stable",        // latest "official" version
     // TODO: consider renaming this branch to "next"
-    prereleaseBranches: ["main"] // cutting-edge versions
+    prereleaseBranches: ["next"] // cutting-edge versions
   };
 }
 
