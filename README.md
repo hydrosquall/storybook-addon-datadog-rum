@@ -44,10 +44,9 @@ To run this project, you will need to add the following environment variables to
 
 Contributions are always welcome!
 
-See [`contributing.md`](./CONTRIBUTING.md) for ways to get started.
+See [`contributing.md`](./CONTRIBUTING.md) for ways to get started, and [`MAINTAINERS`](./MAINTAINERS.md) to learn how to publish the library
 
 Please adhere to this project's `code of conduct`.
-
 
 ## Acknowledgements
 
