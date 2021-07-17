@@ -3,7 +3,6 @@
 // No need to manually instrument page views due to usage of history API
 //  - https://docs.datadoghq.com/real_user_monitoring/browser/data_collected/?tab=view#single-page-applications
 
-
 import { window as globalWindow } from 'global';
 import { addons } from '@storybook/addons';
 import { STORY_ERRORED, STORY_MISSING } from '@storybook/core-events';
@@ -20,9 +19,9 @@ addons.register(ADDON_ID, (api) => {
     site: globalWindow.STORYBOOK_DATADOG_SITE,
     service: globalWindow.STORYBOOK_DATADOG_SERVICE ?? 'storybook-default',
     //  env: 'production',
-    //  version: '1.0.0',
+    version: globalWindow.STORYBOOK_DATADOG_VERSION ?? '0.1.0',
     sampleRate: globalWindow.STORYBOOK_DATADOG_SAMPLE_RATE ?? 100,
-    trackInteractions: globalWindow.STORYBOOK_DATADOG_TRACK_INTERACTIONS?? true,
+    trackInteractions: globalWindow.STORYBOOK_DATADOG_TRACK_INTERACTIONS ?? true,
   })
 
   api.on(STORY_ERRORED, ({ description }: { description: string }) => {
