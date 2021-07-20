@@ -37,6 +37,7 @@ To run this project, you will need to add the following environment variables to
     STORYBOOK_DATADOG_SAMPLE_RATE?: number;
     STORYBOOK_DATADOG_TRACK_INTERACTIONS?: boolean;
     STORYBOOK_DATADOG_VERSION?: string;
+    STORYBOOK_DATADOG_ENV?: string;
 }
 ```
 
