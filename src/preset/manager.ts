@@ -18,7 +18,7 @@ addons.register(ADDON_ID, (api) => {
     clientToken: globalWindow.STORYBOOK_DATADOG_CLIENT_TOKEN,
     site: globalWindow.STORYBOOK_DATADOG_SITE,
     service: globalWindow.STORYBOOK_DATADOG_SERVICE ?? 'storybook-default',
-    //  env: 'production',
+    env: globalWindow.STORYBOOK_DATADOG_ENV ?? undefined,
     version: globalWindow.STORYBOOK_DATADOG_VERSION ?? '0.1.0',
     sampleRate: globalWindow.STORYBOOK_DATADOG_SAMPLE_RATE ?? 100,
     trackInteractions: globalWindow.STORYBOOK_DATADOG_TRACK_INTERACTIONS ?? true,
