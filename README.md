@@ -41,6 +41,16 @@ To run this project, you will need to add the following environment variables to
 ```
 
 [Full initialization parameters documentation](https://docs.datadoghq.com/real_user_monitoring/browser/#initialization-parameters)
+
+Then, read them in your `manager.js`.
+
+```js
+window.STORYBOOK_DATADOG_APPLICATION_ID = process.env.STORYBOOK_DATADOG_APPLICATION_ID;
+window.STORYBOOK_DATADOG_CLIENT_TOKEN = process.env.STORYBOOK_DATADOG_CLIENT_TOKEN;
+window.STORYBOOK_DATADOG_SITE = process.env.STORYBOOK_DATADOG_SITE;
+window.STORYBOOK_DATADOG_SERVICE = process.env.STORYBOOK_DATADOG_SERVICE;
+```
+
 ## Contributing
 
 Contributions are always welcome!

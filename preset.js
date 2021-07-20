@@ -9,6 +9,5 @@ function managerEntries(entry = [], presetOptions) {
 }
 
 module.exports = {
-  managerEntries,
-  config,
+  managerEntries
 };
