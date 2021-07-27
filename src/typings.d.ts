@@ -7,5 +7,6 @@ declare module "global" {
     STORYBOOK_DATADOG_SAMPLE_RATE?: number;
     STORYBOOK_DATADOG_TRACK_INTERACTIONS?: boolean;
     STORYBOOK_DATADOG_VERSION?: string;
+    STORYBOOK_DATADOG_ENV?: string;
   }
 };

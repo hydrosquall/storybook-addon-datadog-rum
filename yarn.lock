@@ -2042,33 +2042,33 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@datadog/browser-core@npm:2.13.0":
-  version: 2.13.0
-  resolution: "@datadog/browser-core@npm:2.13.0"
+"@datadog/browser-core@npm:2.18.0":
+  version: 2.18.0
+  resolution: "@datadog/browser-core@npm:2.18.0"
   dependencies:
     tslib: ^1.10.0
-  checksum: dfa2ca6690b0b2eb0327d00862492489997558eed27a10c9b7f088f858b304014945b8b895949a17a25c7ed1c11e1c60bb4c276cea76a876ec2f71c2797257b2
+  checksum: 8da1e843361730e39a31c67e992fa1e0c758516920f554827a49df7f8baa6f67be173e17dee25a99dfa56b82fae4ce1f47fff34912a23c6ac1bc55e3465c999a
   languageName: node
   linkType: hard
 
-"@datadog/browser-rum-core@npm:2.13.0":
-  version: 2.13.0
-  resolution: "@datadog/browser-rum-core@npm:2.13.0"
+"@datadog/browser-rum-core@npm:2.18.0":
+  version: 2.18.0
+  resolution: "@datadog/browser-rum-core@npm:2.18.0"
   dependencies:
-    "@datadog/browser-core": 2.13.0
+    "@datadog/browser-core": 2.18.0
     tslib: ^1.10.0
-  checksum: 79442f23d670798099ebcde3a23ffbf605786ccbe3b150a0e8c2d0ff5abc1d161d8043d19b90f2cb87a5e8bacfbbeb0a53a34050c45081fa592c998c7e10b932
+  checksum: 3f2450a1b56411a8732a0ba99ca0af5b3de3bb426069db46dabce60d84a9a4d002456e7e92e81428e7552a06592693b41a1d268805e85a79b4c05b15b7ccda4d
   languageName: node
   linkType: hard
 
-"@datadog/browser-rum@npm:^2.13.0":
-  version: 2.13.0
-  resolution: "@datadog/browser-rum@npm:2.13.0"
+"@datadog/browser-rum@npm:^2.18.0":
+  version: 2.18.0
+  resolution: "@datadog/browser-rum@npm:2.18.0"
   dependencies:
-    "@datadog/browser-core": 2.13.0
-    "@datadog/browser-rum-core": 2.13.0
+    "@datadog/browser-core": 2.18.0
+    "@datadog/browser-rum-core": 2.18.0
     tslib: ^1.10.0
-  checksum: d94ae7b97d0dba270036ed3f16573d42ebf91221e8de2e1901866ee5ffa945de9d4f716bbb709a307afe249c1a08c6a7dd1121ac800ec39b32bc4a9e32a86d94
+  checksum: 1f6e09bbcc9142ce665bddf808c65be9dce279379ccb70d326a54830f61285c5fed1d107c65ff433add8bcb15e98c29114be591e9b9b41c9187e6b73dd2aae4c
   languageName: node
   linkType: hard
 
@@ -13261,7 +13261,7 @@ resolve@~1.7.1:
     "@babel/preset-env": ^7.12.1
     "@babel/preset-react": ^7.12.5
     "@babel/preset-typescript": ^7.13.0
-    "@datadog/browser-rum": ^2.13.0
+    "@datadog/browser-rum": ^2.18.0
     "@storybook/addon-essentials": ^6.2.9
     "@storybook/addons": 6.2.9
     "@storybook/core-events": 6.2.9

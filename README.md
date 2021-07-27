@@ -36,18 +36,29 @@ To run this project, you will need to add the following environment variables to
     STORYBOOK_DATADOG_SERVICE?: string;
     STORYBOOK_DATADOG_SAMPLE_RATE?: number;
     STORYBOOK_DATADOG_TRACK_INTERACTIONS?: boolean;
+    STORYBOOK_DATADOG_VERSION?: string;
+    STORYBOOK_DATADOG_ENV?: string;
 }
 ```
 
 [Full initialization parameters documentation](https://docs.datadoghq.com/real_user_monitoring/browser/#initialization-parameters)
+
+Then, read them in your `manager.js`.
+
+```js
+window.STORYBOOK_DATADOG_APPLICATION_ID = process.env.STORYBOOK_DATADOG_APPLICATION_ID;
+window.STORYBOOK_DATADOG_CLIENT_TOKEN = process.env.STORYBOOK_DATADOG_CLIENT_TOKEN;
+window.STORYBOOK_DATADOG_SITE = process.env.STORYBOOK_DATADOG_SITE;
+window.STORYBOOK_DATADOG_SERVICE = process.env.STORYBOOK_DATADOG_SERVICE;
+```
+
 ## Contributing
 
 Contributions are always welcome!
 
-See [`contributing.md`](./CONTRIBUTING.md) for ways to get started.
+See [`contributing.md`](./CONTRIBUTING.md) for ways to get started, and [`MAINTAINERS`](./MAINTAINERS.md) to learn how to publish the library
 
 Please adhere to this project's `code of conduct`.
-
 
 ## Acknowledgements
 
